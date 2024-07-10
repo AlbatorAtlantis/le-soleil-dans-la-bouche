@@ -4,10 +4,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    background-color: #007bff;
+    background-color: #0066cc; /* Bleu Méditerranée */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -32,7 +33,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0056b3;
+    background-color: #004080; /* Bleu foncé */
     border-radius: 5px;
 }
 
@@ -50,7 +51,7 @@ section {
 }
 
 h1, h2 {
-    color: #007bff;
+    color: #0066cc; /* Bleu Méditerranée */
     text-align: center;
 }
 
@@ -72,14 +73,14 @@ form label, form input, form select, form button {
 
 form button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #0066cc; /* Bleu Méditerranée */
     color: white;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #004080; /* Bleu foncé */
 }
 
 ul {
@@ -94,9 +95,22 @@ ul li {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #007bff;
+    background-color: #0066cc; /* Bleu Méditerranée */
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+h3 {
+    color: #cc6600; /* Ocre */
+}
+
+a {
+    color: #339966; /* Vert olive */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
