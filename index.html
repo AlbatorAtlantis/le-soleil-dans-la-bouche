@@ -1,1 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Soleil dans la Bouche : Recettes Crétoises Savoureuses et Équilibrées</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#calculator">Calculateur</a></li>
+                <li><a href="#recipes">Recettes</a></li>
+                <li><a href="#subscriptions">Abonnements</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#suppliers">Fournisseurs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home">
+            <h1>Bienvenue sur Le Soleil dans la Bouche</h1>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/votre_video_id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="intro">Entrez vos données pour découvrir des recettes crétoises personnalisées et bénéfiques pour votre santé!</p>
+        </section>
+
+        <section id="about">
+            <h2>À Propos</h2>
+            <p>Présentation de vous-même ou de votre équipe, votre mission, et l'histoire derrière votre concept.</p>
+        </section>
+
+        <section id="calculator">
+            <h2>Calculateur d'IMC et de Calories</h2>
+            <form id="health-form">
+                <label for="height">Hauteur (cm):</label>
+                <input type="number" id="height" required>
+                <label for="weight">Poids (kg):</label>
+                <input type="number" id="weight" required>
+                <label for="age">Âge:</label>
+                <input type="number" id="age" required>
+                <label for="sex">Sexe:</label>
+                <select id="sex" required>
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                </select>
+                <label for="activity">Niveau d'activité:</label>
+                <select id="activity" required>
+                    <option value="sedentary">Sédentaire</option>
+                    <option value="light">Légère</option>
+                    <option value="moderate">Modérée</option>
+                    <option value="active">Active</option>
+                    <option value="very active">Très active</option>
+                </select>
+                <button type="submit">Calculer</button>
+            </form>
+            <div id="result"></div>
+            <canvas id="bmiChart"></canvas>
+        </section>
+
+        <section id="recipes">
+            <h2>Recettes</h2>
+            <div id="recipe1">
+                <h3>Soupe de Pois Chiches (Revithia)</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Pois chiches secs - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Oignon - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Ail - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Feuilles de laurier - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Jus de citron - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sel et poivre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe2">
+                <h3>Salade Grecque</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Tomates - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Concombre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Oignon rouge - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Poivron vert - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Olives - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Feta - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Origan - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe3">
+                <h3>Tzatziki</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Yaourt grec - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Concombre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Ail - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Aneth - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Sel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe4">
+                <h3>Fava (Purée de Pois Cassés)</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Pois cassés - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Oignon - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank
+                </li>
+                    <li>Citron - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Poivre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe5">
+                <h3>Horta (Herbes Sauvages Bouillies)</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Herbes sauvages (comme le pissenlit) - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Citron - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                </ul>
+            </div>
+
+            <h2>Plats</h2>
+            
+            <div id="recipe6">
+                <h3>Moussaka</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Aubergines - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Pommes de terre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Viande hachée - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Oignons - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Tomates - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Fromage râpé - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Bechamel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe7">
+                <h3>Pasticcio</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Macaroni - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Viande hachée - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Oignons - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Tomates - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Fromage râpé - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Bechamel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe8">
+                <h3>Gemista (Légumes Farcis)</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Tomates - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Poivrons - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Riz - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Oignons - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Herbes fraîches - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe9">
+                <h3>Souvlaki</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Viande (poulet, porc ou agneau) - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Citron - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Oignon - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Poivron - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Herbes fraîches - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Poivre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe10">
+                <h3>Stifado</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Viande (généralement du bœuf ou du lapin) - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Oignons grelots - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Tomates - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Vin rouge - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Hu
+                    <li>Huile d'olive - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Feuilles de laurier - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Herbes fraîches - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sel - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Poivre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                </ul>
+            </div>
+
+            <h2>Desserts</h2>
+            
+            <div id="recipe11">
+                <h3>Baklava</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_11" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Pâte filo - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Noix (noix, amandes, pistaches) - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Miel - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Sucre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Cannelle - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Beurre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Eau de rose - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe12">
+                <h3>Galaktoboureko</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_12" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Pâte filo - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Semoule - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Lait - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Sucre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Oeufs - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Vanille - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Beurre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Citron - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe13">
+                <h3>Loukoumades</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_13" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Farine - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Levure - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Eau - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Miel - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Huile pour friture - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Cannelle - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe14">
+                <h3>Portokalopita (Gâteau à l'Orange)</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Oranges - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Pâte filo - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Sucre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Yogourt grec - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Oeufs - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Beurre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Cannelle - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sucre en poudre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                </ul>
+            </div>
+
+            <div id="recipe15">
+                <h3>Kourabiedes (Biscuits au Beurre)</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id_15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <ul>
+                    <li>Farine - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Beurre - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Sucre - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                    <li>Amandes - <a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                    <li>Sucre glace - <a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+                    <li>Eau de rose - <a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="affiliates">
+            <h2>Accessoires de Cuisine Recommandés</h2>
+            <ul>
+                <li><a href="https://www.amazon.fr/dp/B07D3C6X7G" target="_blank">Balance de précision</a></li>
+                <li><a href="https://www.amazon.fr/dp/B075D5G5G7" target="_blank">Casserole</a></li>
+                <li><a href="https://www.amazon.fr/dp/B01N6T5QY8" target="_blank">Faitout</a></li>
+                <li><a href="https://www.amazon.fr/dp/B01N6T5QY8" target="_blank">Faitout</a></li>
+                <li><a href="https://www.amazon.fr/dp/B07XQXZXJC" target="_blank">Fouet de cuisine</a></li>
+                <li><a href="https://www.amazon.fr/dp/B07HKLS3PQ" target="_blank">Mixeur plongeant</a></li>
+            </ul>
+        </section>
+
+        <section id="subscriptions">
+            <h2>Abonnements</h2>
+            <p>Pour des recommandations de recettes personnalisées, abonnez-vous:</p>
+            <ul>
+                <li>1 à 4 personnes: 3,99€/mois</li>
+                <li>5 à 12 personnes: 7,99€/mois</li>
+            </ul>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <!-- List of blog posts -->
+        </section>
+
+        <section id="suppliers">
+            <h2>Fournisseurs</h2>
+            <ul>
+                <li><a href="https://www.grecos-bio.com" target="_blank">Grecos Bio</a></li>
+                <li><a href="https://www.e-grece.com" target="_blank">E-Grece</a></li>
+                <li><a href="https://www.yolenis.com" target="_blank">Yoleni's</a></li>
+                <li><a href="https://www.prestigecretois.fr" target="_blank">Prestige Crétois</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <ul>
+                <li>Question 1: Réponse...</li>
+                <li>Question 2: Réponse...</li>
+                <!-- Add more questions and answers -->
+            </ul>
+        </section>
+
+        <section id="legal">
+            <h2>Mentions Légales et Politique de Confidentialité</h2>
+            <p>Ce site est un projet personnel réalisé par [Votre Nom]. Je ne suis pas diététicien. Les informations fournies sur ce site sont destinées à des fins d'information générale uniquement et ne constituent pas un conseil médical professionnel. Pour des conseils diététiques ou médicaux spécifiques, veuillez consulter un professionnel de la santé qualifié.</p>
+            <p>Contact: [Votre Email]</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Le Soleil dans la Bouche. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
